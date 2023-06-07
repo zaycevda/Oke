@@ -1,9 +1,10 @@
-package com.example.sportnews
+package com.example.sportnews.presentation
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.sportnews.R
 import com.example.sportnews.databinding.FragmentNewsBinding
 import org.json.JSONException
 import org.json.JSONObject

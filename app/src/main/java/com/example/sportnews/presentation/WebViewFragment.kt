@@ -1,4 +1,4 @@
-package com.example.sportnews
+package com.example.sportnews.presentation
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.webkit.WebViewClient
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.sportnews.R
 import com.example.sportnews.databinding.FragmentWebViewBinding
 
 class WebViewFragment : Fragment(R.layout.fragment_web_view) {
@@ -17,16 +18,23 @@ class WebViewFragment : Fragment(R.layout.fragment_web_view) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        initWebView()
+        initWebView(savedInstanceState)
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        binding.webView.saveState(outState)
     }
 
     @SuppressLint("SetJavaScriptEnabled")
-    private fun initWebView() {
-        val url = arguments?.getString(URL)
+    private fun initWebView(savedInstanceState: Bundle?) {
+        val url = arguments?.getString(URL_KEY)!!
+
+        savedInstanceState?.let {
+            binding.webView.restoreState(it)
+        } ?: binding.webView.loadUrl(url)
 
         binding.webView.webViewClient = WebViewClient()
-
-        url?.let { binding.webView.loadUrl(it) }
 
         with(binding.webView.settings) {
             javaScriptEnabled = true
@@ -60,6 +68,7 @@ class WebViewFragment : Fragment(R.layout.fragment_web_view) {
     }
 
     companion object {
-        const val URL = "URL"
+        const val URL_KEY = "URL_KEY"
+        private const val WEB_VIEW_STATE = "WEB_VIEW_STATE"
     }
 }

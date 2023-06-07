@@ -1,4 +1,4 @@
-package com.example.sportnews
+package com.example.sportnews.utils
 
 import android.content.Context
 

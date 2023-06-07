@@ -1,4 +1,4 @@
-package com.example.sportnews
+package com.example.sportnews.presentation
 
 import android.content.Intent
 import android.net.Uri
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.bumptech.glide.Glide
+import com.example.sportnews.R
 import com.example.sportnews.databinding.ItemNewBinding
 
 class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ViewHolder>() {

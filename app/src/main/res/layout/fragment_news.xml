@@ -7,5 +7,5 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-    tools:context=".NewsFragment"
+    tools:context=".presentation.NewsFragment"
     tools:listitem="@layout/item_new" />

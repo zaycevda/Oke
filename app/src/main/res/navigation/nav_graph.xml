@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.sportnews.SplashFragment"
+        android:name="com.example.sportnews.presentation.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash">
         <action
@@ -17,15 +17,27 @@
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_splashFragment_to_newsFragment"
-            app:destination="@id/newsFragment" />
+            app:destination="@id/newsFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_errorFragment"
+            app:destination="@id/errorFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/newsFragment"
-        android:name="com.example.sportnews.NewsFragment"
+        android:name="com.example.sportnews.presentation.NewsFragment"
         android:label="fragment_news"
         tools:layout="@layout/fragment_news" />
     <fragment
         android:id="@+id/webViewFragment"
-        android:name="com.example.sportnews.WebViewFragment"
+        android:name="com.example.sportnews.presentation.WebViewFragment"
         android:label="WebViewFragment" />
+    <fragment
+        android:id="@+id/errorFragment"
+        android:name="com.example.sportnews.presentation.ErrorFragment"
+        android:label="fragment_error"
+        tools:layout="@layout/fragment_error" />
 </navigation>
