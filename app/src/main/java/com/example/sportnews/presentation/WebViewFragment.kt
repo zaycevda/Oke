@@ -69,6 +69,5 @@ class WebViewFragment : Fragment(R.layout.fragment_web_view) {
 
     companion object {
         const val URL_KEY = "URL_KEY"
-        private const val WEB_VIEW_STATE = "WEB_VIEW_STATE"
     }
 }
