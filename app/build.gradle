@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.sportnews'
+    namespace 'exercise.okebet.app'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.sportnews"
+        applicationId "exercise.okebet.app"
         minSdk 21
         targetSdk 33
         versionCode 1

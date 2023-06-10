@@ -9,4 +9,4 @@
     android:text="@string/the_application_requires_access_to_the_network"
     android:textColor="@color/black"
     android:textSize="32sp"
-    tools:context=".presentation.ErrorFragment" />
+    tools:context="exercise.okebet.app.presentation.ErrorFragment" />

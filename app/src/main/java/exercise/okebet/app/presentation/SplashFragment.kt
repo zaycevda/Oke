@@ -1,4 +1,4 @@
-package com.example.sportnews.presentation
+package exercise.okebet.app.presentation
 
 import android.content.Context
 import android.net.ConnectivityManager
@@ -9,8 +9,8 @@ import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.sportnews.R
-import com.example.sportnews.utils.SharedPrefs
+import exercise.okebet.app.R
+import exercise.okebet.app.utils.SharedPrefs
 import com.google.firebase.BuildConfig
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.ktx.remoteConfig

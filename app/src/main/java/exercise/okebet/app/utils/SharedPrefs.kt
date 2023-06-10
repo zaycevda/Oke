@@ -1,4 +1,4 @@
-package com.example.sportnews.utils
+package exercise.okebet.app.utils
 
 import android.content.Context
 

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.sportnews.presentation.SplashFragment"
+        android:name="exercise.okebet.app.presentation.SplashFragment"
         android:label="SplashFragment"
         tools:layout="@layout/fragment_splash">
         <action
@@ -28,16 +28,16 @@
     </fragment>
     <fragment
         android:id="@+id/newsFragment"
-        android:name="com.example.sportnews.presentation.NewsFragment"
+        android:name="exercise.okebet.app.presentation.NewsFragment"
         android:label="NewsFragment"
         tools:layout="@layout/fragment_news" />
     <fragment
         android:id="@+id/webViewFragment"
-        android:name="com.example.sportnews.presentation.WebViewFragment"
+        android:name="exercise.okebet.app.presentation.WebViewFragment"
         android:label="WebViewFragment" />
     <fragment
         android:id="@+id/errorFragment"
-        android:name="com.example.sportnews.presentation.ErrorFragment"
+        android:name="exercise.okebet.app.presentation.ErrorFragment"
         android:label="ErrorFragment"
         tools:layout="@layout/fragment_error" />
 </navigation>

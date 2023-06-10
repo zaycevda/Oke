@@ -1,6 +1,6 @@
-package com.example.sportnews.presentation
+package exercise.okebet.app.presentation
 
 import androidx.appcompat.app.AppCompatActivity
-import com.example.sportnews.R
+import exercise.okebet.app.R
 
 class MainActivity : AppCompatActivity(R.layout.activity_main)

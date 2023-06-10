@@ -1,4 +1,4 @@
-package com.example.sportnews.presentation
+package exercise.okebet.app.presentation
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,8 +8,8 @@ import android.webkit.WebViewClient
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import by.kirich1409.viewbindingdelegate.viewBinding
-import com.example.sportnews.R
-import com.example.sportnews.databinding.FragmentWebViewBinding
+import exercise.okebet.app.R
+import exercise.okebet.app.databinding.FragmentWebViewBinding
 
 class WebViewFragment : Fragment(R.layout.fragment_web_view) {
 

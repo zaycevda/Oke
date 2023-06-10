@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "128833568472",
-    "project_id": "sportnews-f7b21",
-    "storage_bucket": "sportnews-f7b21.appspot.com"
+    "project_number": "1022006332082",
+    "project_id": "exok-28a70",
+    "storage_bucket": "exok-28a70.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:128833568472:android:bc17906f34dc549964e1ad",
+        "mobilesdk_app_id": "1:1022006332082:android:a8c47dfeb4c51aba5797ab",
         "android_client_info": {
-          "package_name": "com.example.sportnews"
+          "package_name": "exercise.okebet.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "128833568472-sucel4ouool648ckupsf7m7c3ah4k9o0.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.sportnews",
-            "certificate_hash": "e1288aa3a74f120822573a55b1dffd9af1948a9b"
-          }
-        },
-        {
-          "client_id": "128833568472-dbdbabpdgbovt96se50lhp07bl990d8m.apps.googleusercontent.com",
+          "client_id": "1022006332082-abd7evgijg8e56on9ju9pqnrn2ch9563.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBlkZWFy13QinnMb9SQcJCDDMA0TeE1ITI"
+          "current_key": "AIzaSyDgIVSkl98B1HRyeszvvum1id8L3NpA3n8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "128833568472-dbdbabpdgbovt96se50lhp07bl990d8m.apps.googleusercontent.com",
+              "client_id": "1022006332082-abd7evgijg8e56on9ju9pqnrn2ch9563.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
