@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="8dp"
     android:layout_marginVertical="4dp"
+    android:background="@drawable/bg_new"
     android:backgroundTint="@color/black"
     app:strokeColor="@color/blue">
 

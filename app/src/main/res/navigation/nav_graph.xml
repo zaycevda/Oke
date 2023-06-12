@@ -30,7 +30,11 @@
         android:id="@+id/newsFragment"
         android:name="exercise.okebet.app.presentation.NewsFragment"
         android:label="NewsFragment"
-        tools:layout="@layout/fragment_news" />
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_newsFragment_to_newDialog"
+            app:destination="@id/newDialog" />
+    </fragment>
     <fragment
         android:id="@+id/webViewFragment"
         android:name="exercise.okebet.app.presentation.WebViewFragment"
@@ -40,4 +44,8 @@
         android:name="exercise.okebet.app.presentation.ErrorFragment"
         android:label="ErrorFragment"
         tools:layout="@layout/fragment_error" />
+    <dialog
+        android:id="@+id/newDialog"
+        android:name="exercise.okebet.app.presentation.NewDialog"
+        android:label="NewDialog" />
 </navigation>

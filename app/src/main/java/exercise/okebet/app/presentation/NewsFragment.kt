@@ -3,9 +3,12 @@ package exercise.okebet.app.presentation
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import androidx.core.os.bundleOf
+import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import exercise.okebet.app.R
 import exercise.okebet.app.databinding.FragmentNewsBinding
+import exercise.okebet.app.models.New
 import org.json.JSONException
 import org.json.JSONObject
 import java.nio.charset.Charset
@@ -28,7 +31,18 @@ class NewsFragment : Fragment(R.layout.fragment_news) {
     }
 
     private fun initAdapter() {
-        adapter = NewsAdapter()
+        adapter = NewsAdapter(
+            onClick = { new ->
+                findNavController().navigate(
+                    R.id.action_newsFragment_to_newDialog,
+                    bundleOf(
+                        NewDialog.TITLE to new.title,
+                        NewDialog.DESCRIPTION to new.description,
+                        NewDialog.IMAGE_URL to new.imageUrl
+                    )
+                )
+            }
+        )
         jsonObjectsToAdapter()
         binding.rvNews.adapter = adapter
     }
@@ -40,10 +54,15 @@ class NewsFragment : Fragment(R.layout.fragment_news) {
                 val jsonArray = jsonObject.getJSONArray(NAME)
                 for (i in 0 until jsonArray.length()) {
                     val newData = jsonArray.getJSONObject(i)
-                    adapter?.titles?.add(newData.getString(TITLE))
-                    adapter?.descriptions?.add(newData.getString(DESCRIPTION))
-                    adapter?.images?.add(newData.getString(URL_TO_IMAGE))
-                    adapter?.links?.add(newData.getString(URL))
+
+                    val new =
+                        New(
+                            title = newData.getString(TITLE),
+                            description = newData.getString(DESCRIPTION),
+                            imageUrl = newData.getString(IMAGE_URL)
+                        )
+
+                    adapter?.news?.add(new)
                 }
             }
         } catch (e: JSONException) {
@@ -65,12 +84,11 @@ class NewsFragment : Fragment(R.layout.fragment_news) {
         }
 
     private companion object {
+        private const val TITLE = "title"
         private const val DESCRIPTION = "description"
+        private const val IMAGE_URL = "imageUrl"
         private const val FILENAME = "news.json"
         private const val FORMAT = "UTF-8"
         private const val NAME = "news"
-        private const val TITLE = "title"
-        private const val URL = "url"
-        private const val URL_TO_IMAGE = "urlToImage"
     }
 }

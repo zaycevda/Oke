@@ -8,4 +8,4 @@
     android:background="@color/black"
     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
     tools:context="exercise.okebet.app.presentation.NewsFragment"
-    tools:listitem="@layout/item_new" />
+    tools:listitem="@layout/dialog_new" />
