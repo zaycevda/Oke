@@ -1,52 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <style name="SportNews" parent="Theme.Material3.Light.NoActionBar" />
 
     <style name="ChangeThemeImageViewStyle">
-        <item name="android:src">@drawable/ic_sun</item>
+        <item name="android:src">@drawable/ic_crescent</item>
     </style>
 
     <style name="ErrorTextStyle">
-        <item name="android:background">@color/white</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@color/black</item>
+        <item name="android:textColor">@color/white</item>
         <item name="android:textSize">32sp</item>
     </style>
 
     <style name="NewStyle">
         <item name="android:background">@drawable/bg_new</item>
-        <item name="android:backgroundTint">@color/white</item>
-        <item name="strokeColor">@color/blue_light</item>
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="strokeColor">@color/blue</item>
     </style>
 
     <style name="ProgressBarStyle">
-        <item name="android:indeterminateTint">@color/black</item>
+        <item name="android:indeterminateTint">@color/white</item>
     </style>
 
     <style name="RecyclerViewStyle">
-        <item name="android:background">@color/white</item>
+        <item name="android:background">@color/black</item>
     </style>
 
     <style name="SubtitleTextStyle">
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/white</item>
         <item name="android:textSize">16sp</item>
     </style>
 
     <style name="SplashScreenStyle">
-        <item name="android:background">@color/white</item>
+        <item name="android:background">@color/black</item>
     </style>
 
     <style name="TitleTextStyle">
-        <item name="android:textColor">@color/blue_light</item>
+        <item name="android:textColor">@color/blue</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="ToolbarStyle">
-        <item name="android:background">@color/white</item>
+        <item name="android:background">@color/black</item>
     </style>
 
     <style name="ToolbarTextStyle">
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/white</item>
         <item name="android:textSize">22sp</item>
         <item name="android:textStyle">bold</item>
     </style>

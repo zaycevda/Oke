@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/NewStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="8dp"
-    android:layout_marginVertical="4dp"
-    android:backgroundTint="@color/black"
-    app:strokeColor="@color/blue">
+    android:layout_marginVertical="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,13 +14,11 @@
 
         <TextView
             android:id="@+id/tv_title"
+            style="@style/TitleTextStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="4dp"
             android:layout_weight="1"
-            android:textColor="@color/blue"
-            android:textSize="18sp"
-            android:textStyle="bold"
             tools:text="Aaron Judge to injured list with toe injury - MLB.com" />
 
         <ImageView

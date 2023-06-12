@@ -2,7 +2,7 @@ package exercise.okebet.app.utils
 
 import android.content.Context
 
-class SharedPrefs(context: Context) {
+class UrlSharedPrefs(context: Context) {
 
     private val sharedPrefs = context.getSharedPreferences(URL_PREFS, Context.MODE_PRIVATE)
 

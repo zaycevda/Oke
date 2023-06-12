@@ -10,7 +10,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import exercise.okebet.app.R
-import exercise.okebet.app.utils.SharedPrefs
+import exercise.okebet.app.utils.UrlSharedPrefs
 import com.google.firebase.BuildConfig
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.ktx.remoteConfig
@@ -20,7 +20,7 @@ import kotlin.Exception
 
 class SplashFragment : Fragment(R.layout.fragment_splash) {
 
-    private val sharedPrefs by lazy { SharedPrefs(requireContext()) }
+    private val urlSharedPrefs by lazy { UrlSharedPrefs(requireContext()) }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -29,12 +29,12 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
     }
 
     private fun navigate() {
-        if (sharedPrefs.url == null) return remoteConfig()
+        if (urlSharedPrefs.url == null) return remoteConfig()
 
         if (isInternetAvailable())
             findNavController().navigate(
                 R.id.action_splashFragment_to_webViewFragment,
-                bundleOf(WebViewFragment.URL_KEY to sharedPrefs.url)
+                bundleOf(WebViewFragment.URL_KEY to urlSharedPrefs.url)
             )
         else
             findNavController().navigate(R.id.action_splashFragment_to_errorFragment)
@@ -57,10 +57,10 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
                 if (url.isEmpty() || checkIsEmu())
                     findNavController().navigate(R.id.action_splashFragment_to_newsFragment)
                 else {
-                    sharedPrefs.url = url
+                    urlSharedPrefs.url = url
                     findNavController().navigate(
                         R.id.action_splashFragment_to_webViewFragment,
-                        bundleOf(WebViewFragment.URL_KEY to sharedPrefs.url)
+                        bundleOf(WebViewFragment.URL_KEY to urlSharedPrefs.url)
                     )
                 }
             } else findNavController().navigate(R.id.action_splashFragment_to_errorFragment)

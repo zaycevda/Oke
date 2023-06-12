@@ -3,12 +3,15 @@ package exercise.okebet.app.presentation
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import android.widget.ImageView
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import exercise.okebet.app.R
 import exercise.okebet.app.databinding.FragmentNewsBinding
 import exercise.okebet.app.models.New
+import exercise.okebet.app.utils.ThemeSharedPrefs
 import org.json.JSONException
 import org.json.JSONObject
 import java.nio.charset.Charset
@@ -19,10 +22,14 @@ class NewsFragment : Fragment(R.layout.fragment_news) {
 
     private var adapter: NewsAdapter? = null
 
+    private val themeSharedPrefs by lazy { ThemeSharedPrefs(requireContext()) }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         initAdapter()
+
+        changeTheme()
     }
 
     override fun onDestroyView() {
@@ -82,6 +89,18 @@ class NewsFragment : Fragment(R.layout.fragment_news) {
             e.printStackTrace()
             null
         }
+
+    private fun changeTheme() {
+        binding.ivChangeTheme.setOnClickListener {
+            if (themeSharedPrefs.isDarkTheme) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                themeSharedPrefs.isDarkTheme = false
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                themeSharedPrefs.isDarkTheme = true
+            }
+        }
+    }
 
     private companion object {
         private const val TITLE = "title"

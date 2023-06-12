@@ -2,13 +2,11 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/NewStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="8dp"
-    android:layout_marginVertical="4dp"
-    android:background="@drawable/bg_new"
-    android:backgroundTint="@color/black"
-    app:strokeColor="@color/blue">
+    android:layout_marginVertical="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,12 +15,10 @@
 
         <TextView
             android:id="@+id/tv_title"
+            style="@style/TitleTextStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
-            android:textColor="@color/blue"
-            android:textSize="18sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/iv_new"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -30,12 +26,11 @@
 
         <TextView
             android:id="@+id/tv_description"
+            style="@style/SubtitleTextStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="4dp"
-            android:textColor="@color/white"
-            android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@id/iv_new"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_title"
